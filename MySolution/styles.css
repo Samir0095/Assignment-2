@@ -16,6 +16,7 @@
     display: flex;
 }
 
+
 /* nav-bar */
 
 .logo-school{
@@ -73,7 +74,14 @@
     font-weight: 600;
     margin-left: 186px;
     margin-right: 141px;
+    transition: background-color 0.3s ease;
+    transition: font-size 0.3s ease;
 
+}
+.contact > button:hover {
+    background-color: #01ACFD;
+    font-size: 22px;
+    
 }
 .hamburger{
     display: none;
@@ -120,6 +128,12 @@ hr{
     border-radius: 12px;
     font-size: 20px;
     font-weight: 700;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+}
+.section-1 .text-items button:hover{
+    background-color: white;
+    color: black;
 }
 
 
@@ -128,6 +142,14 @@ hr{
     height: 575px;
 }
 
+
+
+
+/* background-image */
+.section-2-and-3{
+    background-image: url('/assets/bg.png');
+    background-repeat: repeat-y;
+}
 
 
 /* section-2 */
@@ -159,6 +181,10 @@ hr{
     width: 367.8px;
     height: 481.5px;
     border-radius: 18.86px;
+    transition: transform 0.3s ease;
+}
+.section-2 .cards:hover{
+    transform: scale(1.07);
     
 }
  .card-1{
@@ -229,6 +255,16 @@ hr{
     font-size: 30px;
     font-weight: 600;
     margin-top: 80px;
+    transition: transform 0.3 ease;
+    transition: background-color 0.3 ease;
+}
+.arrow-1:hover{
+    transform: scale(1.1);
+    background-color: rgb(110, 206, 239);
+}
+.arrow-2:hover{
+    transform: scale(1.1);
+    background-color: rgb(110, 206, 239);
 }
 
 
@@ -240,155 +276,226 @@ hr{
 
 
 /* section-3 */
-.grid-container {
-    display: grid;
+
+.section-3{
+    width: 1440px;
+    height: 1018.02px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center; 
+    background: linear-gradient(0deg, #eddebb 20%, #ffffff 80%);
+    margin:0;
+    padding:0;
+
+   
     
 }
-.grid-container > div{
+.section-3 > h3{
+    font-size: 46px;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+.cards{
+    display: flex;
+}
+
+.big-card{
+    width: 540.27px;
+    height: 630.52px;
+    border-radius: 16px;
+    background-color: white;
+}
+.big-card > img{
+    width: 540px;
+    height: 337px;
+    margin: 0;
+    border-top-left-radius: 16px ;
+    border-top-right-radius: 16px;
+    position: absolute;
+    z-index: 1;
+   
+}
+.big-card .date{
+    background-color: #3CD8E8;
+    border-radius: 47.93px;
+    font-size: 15.34px;
+    font-weight: 500;
+    width: 174.51px;
+    height: 47.93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    z-index: 3;
+    margin-top: 314.14px ;
+    margin-left: 38.35px ;
+    
+
+
+}
+.big-card > h4{
+    position: absolute;
+    z-index: 2;
+    margin-top: 395.63px;
+    font-size: 24px;
+    font-weight: 700;
+    width: 402.49px;
+    margin-left: 38.35px;
+}
+.big-card .text{
+    margin-top: 520.26px;
+    width: 433.06px;
+    margin-left: 38.35px ;
+}
+.first-row,.second-row{
+    display: flex;
+}
+.section-3 .story-card{
     width: 290.69px;
     height: 301.61px;
-    text-align: center;
+    border: none;
+    margin: 19.17px;
+    margin-top: 0;
+    border-radius: 16px;
+    background-color: white;
+}
+.story-card > img{
+    width: 291px;
+    height: 177px;
+    border-top-left-radius: 16px ;
+    border-top-right-radius: 16px;
+    position: absolute;
+    z-index: 1;
+}
+.story-card > .date{
+    width: 174.51px;
+    height: 38.35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 47.93px;
+    background-color: #95B226;
+    position: absolute;
+    z-index: 3;
+    margin-top: 157.81px ;
+    margin-left: 37.91px ;
+    transition: 0.3s ease-in-out;
+    
+    
+}
+.story-card:hover > .date {
+    background-color: #5D58F0;
+   
+}
+
+.story-card > h4 {
+    position: absolute;
+    z-index: 2;
+    width: 214px;
+    height: 57.52px;
+    font-size: 15.34px;
+    font-weight: 700;
+    margin-left: 37.91px;
+    margin-top: 220.34px;
+}
+.section-3 > button{
+    width: 197px;
+    height: 50px;
+    margin-top: 80px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 12px;
+    background-color: black;
+
 }
 
 
 
-/* Responsive for mobile */
-@media screen  and (max-width:430px) {
-    .links, .school, .contact{
-        display: none;
-    }
-    body{
-        margin: 0;
-    }
-    .nav-bar-container{
-        width: 390px;
-        height: 75px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        border-bottom: .5px solid orange
-    }
-    .logo{
-        width: 42px;
-        height: 42px;
-        margin-left: 13px;
-        margin-bottom: 30px;
-        margin-top: 10px;
-    }
-    .hamburger{
-        display: block;
-        margin-left: 282px;
-        margin-right: 16px;
-        
-    }
-    hr{
-        display: block;
-    }
 
 
-    /* section-1 - responsive */
-    .section-1{
-        width: 357px;
-        height: 735px;
-        flex-direction:column-reverse;
-        align-items: center;
-        justify-content: center;
-        margin-left: 16px;
-        margin-right: 16px;
-        
-    }
-    .section-1 .text-items{
-        display: flex;
-        flex-direction: column;
-        width: 357px;
-        height: 252px;
-        align-items: center;
-    }
-    .section-1 .text-items > h3{
-        font-size: 32px;
-        font-weight: 700;
-        margin: 0;
-        font-size: 32px;
-        font-weight: 700;
-        width: 357px;
-        text-align: center;
-    }
-    .section-1 .text-items > p{
-        width: 357px;
-        height: 54px;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        padding-bottom: 18px;
-        margin:0;
-    
-    }
-    .section-1 button{
-        width: 131px;
-        height: 42px;
-        font-size: 16px;
-        font-weight: 700;
-    }
-    .section-1 img{
-        width: 336.58px;
-        height: 413px;
-    }
+/* footer */
+footer{
+    width: 1439px;
+    height: 519px;
+    background-color: #01ACFD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 1070.91px;
+    height: 222px;
+    display: flex;
+    justify-content: space-between;
 
-    /* section-2 */
-    .section-2{
-        display: flex;
-        flex-direction: column;
-        width: 373.5px;
-    }
-    .section-2 > h3{
-        font-size: 26px;
-        font-weight: 700;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    .section-2 .cards-container{
-        display: flex;
-        flex-direction: column;
-        width: 357px; 
-           
-    }
-    .section-2 .cards-container .cards{
-        width: 357px;
-        height: 321.28px;
-    }   
-    .section-2 .cards-container .cards > img{
-        width: 92.6px;
-        height: 92.6px;
-        margin-top: 36px;
-        margin-bottom: 22px;
-    
-    }
-    .section-2 .cards-container .cards > h4{
-        font-size: 16.6px;
-        font-weight: 700;
-        margin: 0px;
-        margin-bottom: 22px;
-    
-    }
-    .section-2 .cards-container .cards > p{
-        font-weight: 500;
-        font-size: 10.22px;
-        margin-bottom: 22px;
-    }
-    .section-2 .cards-container .cards > button{
-        font-weight: 700;
-        font-size: 10.22px;
-        margin-bottom: 36px;
-    }
-    .cards{
-        margin-bottom: 12.3px;
-    }
-    .arrows{
-        display: none;
-    }
-
-
-    /* section-3 */
-    
+}
+.logo-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
     
 }
+.logo-title > span:nth-child(1) > img{
+    width: 82.9px;
+    height: 81.65px;
+}
+.logo-title > span:nth-child(2) > h4{
+    font-size: 42.14px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    margin-left: 10.7px;
+}
+.left > p{
+    color: white;
+    font-size: 20;
+    font-weight: 500px;
+    width: 399.02px;
+    height: 100px;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.middle > h5{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 32px;
+}
+.middle > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.middle > ul >li{
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.right > h5{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.social-images {
+    width: 192.91px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
